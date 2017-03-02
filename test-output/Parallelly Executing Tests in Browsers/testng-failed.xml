@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Parallelly Executing Tests in Browsers]" parallel="tests">
+  <listeners>
+    <listener class-name="com.library.TestngListners"/>
+  </listeners>
+  <test name="Exceution in FireFox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.scripts.ProductSearchTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="addWishlist"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.scripts.ProductSearchTest -->
+    </classes>
+  </test> <!-- Exceution in FireFox(failed) -->
+</suite> <!-- Failed suite [Parallelly Executing Tests in Browsers] -->
